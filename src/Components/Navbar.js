@@ -1,32 +1,35 @@
-import React from "react";
-import './style.css'
-
-function Navbar(){
-    return(
-        <div className="navbar">
-            <div className="left">
-                <div>
-                <h3 className="webname">E-Commerce</h3>
+import {Link} from "react-router-dom"
+const Navbar = () => {
+    return (
+        <nav className="nav-bar">
+            <Link to ="/">
+                <h2>
+                    Shoppee!!
+                </h2>
+            </Link>
+            <Link to="/cart">
+                <div className="nav-bag">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="40" 
+                        height="40" 
+                        fill="currentColor" 
+                        class="bi bi-cart4" 
+                        viewBox="0 0 16 16"
+                    >
+                    <path 
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                    </svg>
                 </div>
-                <div>
-                    <a>
-                        Product
-                    </a>
+                <div className="bag-quantity">
+                    <span>
+                        3
+                    </span>
                 </div>
-                <div className="addproduct">
-                    <p>Add Product</p>
-                    <a href="https://google.com" target="blank"><img className="incimg" src="https://banner2.cleanpng.com/20180730/bbc/kisspng-computer-icons-icon-design-clip-art-green-tick-with-transparent-background-5b5ebc9c20f0d2.9304821615329353241349.jpg"/></a>
-                </div>
+            </Link>
+            
 
-            </div>
-            <div className="right">
-                <h5 className="name" ><a href="https://github.com/MathurJi0309" target="blank">Mathur_Ji</a></h5>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png"/>
-
-            </div>
-        </div>
-    )
+        </nav >
+      );
 }
-
-
+ 
 export default Navbar;
