@@ -108,7 +108,7 @@
     display: flex;
     height: 600px;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin:1rem auto ;
     padding: 1rem;
     border-radius: 15px;
@@ -117,16 +117,22 @@
 
 .product img{
     width: 200px;
-    height: 200px;
+    height: 40%;
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
 }
 
 
 .product h3{
     font-size: 25px;
     font-weight: 400;
+    height: 40;
+    background-image: linear-gradient(270deg,rgb(130, 130, 130),white);
+    border-radius: 10px;
+    border: 1px solid black;
+
 }
 
 
@@ -427,3 +433,109 @@
 .listitem{
     list-style-type: none;  
 }
+
+
+
+/* ------------------------------------------------------add new prodcut----------------------------------------------------------------------- */
+.input{
+    background-image: url("https://neilpatel.com/wp-content/uploads/2017/05/ecommerceproduct.jpg");
+    background-size: contain;
+    height: 100%;
+    opacity: 0.8;
+}
+
+
+.input h1{
+    width: 26%;
+    margin-left: 37%;
+    margin-top: 20px;
+}
+
+.addproduct{
+    height: 78vh;
+    width: 50vw;
+    margin-left: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.addproduct button{
+    width: 50%;
+    margin-left: 25%;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-weight: 400;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    background-color: #8494c4;
+    color: rgb(0, 0, 0);
+    letter-spacing:1.15px ;
+}
+
+.addproduct button:hover{
+    background-color: #4b70e2;
+    border:1px solid black;
+    border-radius: 10px;
+    color: white;
+    height: 50px;
+    width: 56%;
+    margin-left: 22%;
+}
+
+.titleinput{
+    height: 70px;
+    width: 80%;
+    margin-left: 10%;
+    border: 1px dashed gray;
+    border-radius: 10px;
+    padding-left:30px ;
+    background-color: rgba(225, 233, 240,0.9);
+}
+
+.imginput{
+    height: 250px;
+    width: 80%;
+    margin-left: 10%;
+    border: 1px dashed gray;
+    border-radius: 10px;
+    padding-left:30px ;
+    background-color: rgba(225, 233, 240,0.9);
+}
+
+
+/* ------------------------Detail----------------------------- */
+
+.productdetail{
+    border: 1px solid black ;
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.productdetail h1{
+    height: 30px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.producttitle{
+    font-size: 30px;
+}
+
+.productimg{
+
+    height:100%;
+    width: 250px;
+    margin-left: 10%;
+    border-radius: 10px;
+    border: 5px solid blueviolet;
+
+}
+
+
