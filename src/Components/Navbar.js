@@ -1,5 +1,7 @@
 import {Link} from "react-router-dom"
+import { useSelector } from "react-redux";
 const Navbar = () => {
+    const {cartTotalQuantity}=useSelector(state=>state.cart)
     return (
         <nav className="nav-bar">
             <Link to ="/">
@@ -7,13 +9,17 @@ const Navbar = () => {
                     Shoppee!!
                 </h2>
             </Link>
+            <Link to="/addproduct">
+                <span className="addincart">Add Product</span>
+            </Link>
+            
             <Link to="/cart">
                 <div className="nav-bag">
                     <svg xmlns="http://www.w3.org/2000/svg" 
                         width="40" 
                         height="40" 
                         fill="currentColor" 
-                        class="bi bi-cart4" 
+                        className="bi bi-cart4" 
                         viewBox="0 0 16 16"
                     >
                     <path 
@@ -22,11 +28,11 @@ const Navbar = () => {
                 </div>
                 <div className="bag-quantity">
                     <span>
-                        3
+                        {cartTotalQuantity}
                     </span>
                 </div>
             </Link>
-            
+
 
         </nav >
       );
