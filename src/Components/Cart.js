@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import {addToCart, clearCart, decreaseCart, getTotals, removeFromCart} from "../feactures/cartSlice"
+import {addToCart, clearCart, decreaseCart, getTotals, removeFromCart} from "../Reducer/cartSlice"
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
