@@ -157,6 +157,14 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.product img:hover{
+    width: 205px;
+    height: 205px;
 }
 
 
@@ -166,7 +174,6 @@
     height: auto;
     background-image: linear-gradient(270deg,rgb(130, 130, 130),white);
     border-radius: 10px;
-    border: 1px solid black;
         padding:5px ;
 
 }
@@ -558,32 +565,108 @@
 /* ------------------------Detail----------------------------- */
 
 .productdetail{
-    border: 1px solid black ;
-    height: 90vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    height: 90.2vh;
+    width: 99.99vw;
 }
 
-.productdetail h1{
-    height: 30px;
-    width: 50%;
-    margin-left: 25%;
-}
-
-.producttitle{
+.productdetaildiscription{
     font-size: 30px;
+    font-weight: bolder;
+    font-style: inherit;
+    background-image: linear-gradient(270deg,rgb(95, 95, 95),white);
+    padding-left:5% ;
+    padding-top: 0.5%;
+    padding-bottom:0.5% ;
+    height: 9%;
+
 }
 
-.productimg{
+.productdetailinfo{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
 
-    height:100%;
-    width: 250px;
-    margin-left: 10%;
+}
+
+.productdetailinfoimg{
+    width: 30%;
+    height: 100%;
+
+}
+
+.productdetailinfoimage{
+    width: 100%;
+    height: 70%;
     border-radius: 10px;
-    border: 5px solid blueviolet;
+    margin-top: 10%;
+    
+    
+}
+
+.productdetailinfodetail{
+    width: 60%;
+    height: 100%;
+}
+
+.productdetailinfodetailtitle{
+    font-size: 40px;
+    font-weight: lighter;
+    font-style: normal;
+    margin-top: 5%;
+    height: 10%;
+    background-image: linear-gradient(90deg,rgb(173, 129, 255),white);
+    border-radius: 10px;
+    padding: 1%;
+    
+}
+
+.productdetailinfodetaildescription{
+    font-size:30px ;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 5%;
+    height:30% ;
+    background-image: linear-gradient(90deg,rgb(135, 70, 255),white);
+    border-radius: 10px;
+    padding: 3%;
 
 }
 
+.detailproductdiv{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailproductdivprice{
+    height: 100%;
+    width: 30%;
+    font-size: x-large;
+    font-weight: bolder;
+    background-image: linear-gradient(90deg,rgb(114, 37, 255),white);
+    border-radius: 10px;
+    padding: 2%;
+
+}
+
+.detailproductdivdiscount{
+    height: 100%;
+    width: 30%;
+    font-size: x-large;
+    font-weight: bolder;
+    background-image: linear-gradient(90deg,rgb(89, 0, 255),white);
+    border-radius: 10px;
+    padding: 2%;
+
+}
+
+.mainproductdiv{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+}
 

@@ -14,6 +14,7 @@ const productSlice = createSlice({
       state.productList = state.productList.filter((item) => {
         return item.id !== action.payload.id;
       });
+      
       toast.dark(`Product is deleted`,{
         position:"top-right",
     });
