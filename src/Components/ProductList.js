@@ -7,6 +7,7 @@ import Product from "./Product";
 const ProductList = (props) => {
   const products = useSelector((state) => state.products2.productList);
   // const [isSorting, setSorting] = useState(false);
+  // const[short,setShort]=useState(false)
   console.log("a", products);
   const dispatch = useDispatch();
   console.log("a", products);
@@ -22,7 +23,7 @@ const ProductList = (props) => {
         console.log(error);
       }
     })();
-  }, []);
+  },[]);
   const isLoading = false;
   // const { data, isLoading } = useGetAllProductsQuery();
 
@@ -45,6 +46,7 @@ const ProductList = (props) => {
       ) : (
         <>
           <h2>New Arrivals</h2>
+          <button className="shortbtn">Short</button>
           <div className="products">
             {products.map((product, index) => {
               return (

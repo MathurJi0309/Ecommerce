@@ -85,17 +85,24 @@ const Product = (props) => {
         </div>
       ) : (
         <div key={product.id} className="product">
+          <div className="titlediv">
           <h3>{product.title}</h3>
+          </div>
+          <div className="imgdiv">
+
           <img
             src={product.thumbnail}
             alt={product.title}
             onClick={() => handledetail(product)}
           />
+          </div>
           <div className="details">
-            <span>{product.description}</span>
+            <span className="description">{product.description}</span>
             <span className="price">Rs.{product.price}</span>
           </div>
+          <div>
           <button onClick={() => handleAddToCart(product)}>Add to cart</button>
+          </div>
           <div className="edit-delete">
             <button
               onClick={() => {
