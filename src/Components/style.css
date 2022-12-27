@@ -87,8 +87,26 @@
 /* --------------------------------short -btn----------------- */
 
 
+.mainshort{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5%;
+    padding: 1%;
+    margin-top: -2%;
+    background-image: linear-gradient(90deg,rgb(141, 141, 141),white);
+    border-radius: 10px;
+}
+
+
+.newarrival{
+    height: 50px;
+    width: 20%;
+}
+
+
 .shortbtn{
-    margin-left: 93%;
+
     width: 100px;
     height: 50px;
     font-size: 25px;
@@ -100,9 +118,31 @@
 
 .shortbtn:hover{
     border-radius: 15px;
+    background-color: green;
+    border: 1px solid black;
+    color: white;
+    transition: 500ms;
 }
 
 
+.Nshortbtn{
+
+    width: 100px;
+    height: 50px;
+    font-size: 25px;
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+.Nshortbtn:hover{
+    border-radius: 15px;
+    background-color: none;
+    border: 1px dashed gray;
+    color: white;
+    transition: 500ms;
+}
 
 
 /* ---------------------------------------------------------------Home------------------------------------------------------------------------- */
@@ -669,4 +709,6 @@
     justify-content: space-between;
     margin-top: 3%;
 }
+
+
 

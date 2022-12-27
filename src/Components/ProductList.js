@@ -1,13 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useState,useEffect } from "react";
 import axios from "axios";
 import { loadProducts } from "../Reducer/product2Slice";
 import Product from "./Product";
+import { toast } from "react-toastify";
 
 const ProductList = (props) => {
   const products = useSelector((state) => state.products2.productList);
   // const [isSorting, setSorting] = useState(false);
-  // const[short,setShort]=useState(false)
+  const[short,setShort]=useState(true)
   console.log("a", products);
   const dispatch = useDispatch();
   console.log("a", products);
@@ -27,17 +28,19 @@ const ProductList = (props) => {
   const isLoading = false;
   // const { data, isLoading } = useGetAllProductsQuery();
 
-  // const handleSort = () => {
-  //   setSorting(!isSorting);
-  //   productList?.sort((a, b) => a.price - b.price);
-  //   toast.success(`Applied Low to High`);
-  // };
+  const handleSort = () => {
+    setShort(!short);
+    toast.success(`Applied Low to High`);
+    products?.sort((a, b) => a.price - b.price);
 
-  // const handleClose = () => {
-  //   setSorting(!isSorting);
-  //   productList?.sort((a, b) => a.id - b.id);
-  //   toast.error(`Sorting Removed`);
-  // };
+  };
+
+  const handleClose = () => {
+    setShort(!short);
+    toast.error(`Sorting Removed`);
+    products?.sort((a, b) => a.id - b.id);
+
+  };
 
   return (
     <div className="home-container">
@@ -45,8 +48,10 @@ const ProductList = (props) => {
         <p>Loading...</p>
       ) : (
         <>
-          <h2>New Arrivals</h2>
-          <button className="shortbtn">Short</button>
+          <div className="mainshort">
+          <h2 className="newarrival">New Arrivals</h2>
+          {short ? (<button className="shortbtn" onClick={()=>handleSort()}>Short</button>):(<button className="Nshortbtn" onClick={()=>handleClose()}>Short-X</button>)}
+          </div>
           <div className="products">
             {products.map((product, index) => {
               return (

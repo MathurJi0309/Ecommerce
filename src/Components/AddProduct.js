@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import {useNavigate} from "react-router-dom";
 import { toast } from "react-toastify";
+import { addProducts } from "../Reducer/product2Slice";
 
 const AddProduct = () => {
-
+const dispatch=useDispatch();
 const [title,setTitle]=useState('');
 const [src,setSrc]=useState('');
 const [price,setPrice]=useState('');
@@ -13,7 +15,15 @@ const navigate=useNavigate()
 
 const handleadd=()=>{
     // e.preventdefault()
-    
+    let payload = {
+        title: title,
+        thumbnail: src,
+        price: price,
+        description: discription,
+      };
+      console.log("add product", payload)
+      dispatch(addProducts(payload))
+
 
     toast.info(`Product is deleted`,{
         position:"top-right",
@@ -33,13 +43,13 @@ const handleadd=()=>{
             ):(
                 <div className="input">
             <h1 >Add New Product here</h1>
-        <form className="addproduct">
+        <div className="addproduct">
             <input
             type="text"
             value={title}
             name="title"
             placeholder="type here the title of the product"
-            onChange={(e)=>{setTitle(e.target.value)}}
+            onChange={(e)=>setTitle(e.target.value)}
             className="titleinput"
             />
             <input
@@ -47,7 +57,7 @@ const handleadd=()=>{
             value={src}
             name="src"
             placeholder="enter here the url of the product"
-            onChange={(e)=>{setSrc(e.target.value)}}
+            onChange={(e)=>setSrc(e.target.value)}
             className="imginput"/>
 
             <input
@@ -55,7 +65,7 @@ const handleadd=()=>{
             value={price}
             name="price"
             placeholder="enter the price of the product"
-            onChange={(e)=>{setPrice(e.target.value)}}
+            onChange={(e)=>setPrice(e.target.value)}
             className="titleinput"
             />
             <input
@@ -63,13 +73,13 @@ const handleadd=()=>{
             value={discription}
             name="discription"
             placeholder="enter discription of product"
-            onChange={(e)=>{setDiscription(e.target.value)}}
+            onChange={(e)=>setDiscription(e.target.value)}
             className="titleinput"
             />
-            <button onClick={()=>handleadd}>
+            <button onClick={()=>handleadd()}>
                 Add Product
             </button>
-        </form>
+        </div>
         </div>
             )
         }
