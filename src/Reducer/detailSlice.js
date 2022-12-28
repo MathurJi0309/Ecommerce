@@ -10,6 +10,9 @@ const detailSlice =createSlice({
     initialState,
     reducers: {
 
+//-------------------------------------------------------show product detail----------------------------------------------------------------------
+
+
             showDetail(state,action){
             const detailProduct={...action.payload};
             state.detailpro=[]

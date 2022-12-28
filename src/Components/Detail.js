@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 
 
+// ---------------------------------------------------- dispatch is used to send the action-----------------------------------------------------
+
 const Detail = () => {
     const details = useSelector((state) => state.detail);
     return (  

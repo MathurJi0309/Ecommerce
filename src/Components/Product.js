@@ -17,6 +17,10 @@ const Product = (props) => {
 
   const { product } = props;
 
+
+// --------------------------------------------------------handleAddToCart-------------------------------------------------------------------------
+
+
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
     navigate("/cart");
@@ -39,15 +43,28 @@ const Product = (props) => {
   };
 
 
+//---------------------------------------------------------handle Delete------------------------------------------------------------------------
+  
+
   const handleDelete = (product) => {
     dispatch(deleteProduct({ id: product.id }));
   };
+
+
+
+//---------------------------------------------------------handle Detail------------------------------------------------------------------------
+
 
   const handledetail = (product) => {
     dispatch(showDetail(product));
     navigate("/detail");
   };
   return (
+ 
+    
+// ----------------------------------------------------------update product form------------------------------------------------------------------
+
+
     <div>
       {editId === product.id ? (
         <div className="updateform">
@@ -84,6 +101,11 @@ const Product = (props) => {
           >update Product</button>
         </div>
       ) : (
+
+
+//-------------------------------------------product list is showing in the below patter----------------------------------------------------------
+
+
         <div key={product.id} className="product">
           <div className="titlediv">
           <h3>{product.title}</h3>
@@ -109,6 +131,13 @@ const Product = (props) => {
                 setEditId(product.id);
               }}
             >
+
+
+
+              {/* --------------------------------------------------edit and delete button --------------------------------------------------*/}
+
+
+
               Edit
             </button>
             <button

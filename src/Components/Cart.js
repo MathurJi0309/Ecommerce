@@ -25,6 +25,9 @@ const Cart = () => {
     dispatch(clearCart());
   }
 
+    //----------------------------------------------------ipnut for the add cart compononet-----------------------------------------------------
+
+
   return (
     <div className="cart-container">
       <h2>Shopping Cart</h2>
@@ -59,6 +62,11 @@ const Cart = () => {
             <h3 className="total">Total</h3>
           </div>
           <div className="cart-items">
+
+          {/* ---------------------------------------------------- dispatch is used to send the action-----------------------------------------------------             */}
+           
+           
+           
             {cart.cartItems &&
               cart.cartItems.map((cartItem) => (
                 <div className="cart-item" key={cartItem.id}>

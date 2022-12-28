@@ -1,18 +1,36 @@
 import {Link} from "react-router-dom"
 import { useSelector } from "react-redux";
+
+// ---------------------------------------------------- Navbar component-----------------------------------------------------
+
 const Navbar = () => {
     const {cartTotalQuantity}=useSelector(state=>state.cart)
     return (
         <nav className="nav-bar">
+
+
+{/* // ---------------------------------------------------- home button for the website----------------------------------------------------- */}
+            
+            
+            
             <Link to ="/">
                 <h2>
                     Shoppee!!
                 </h2>
             </Link>
+{/* 
+            // ----------------------------------------- add product for website----------------------------------------------------- */}
+
+
             <Link to="/addproduct">
                 <span className="addincart">Add Product</span>
             </Link>
             
+      {/* // ---------------------------------------------------- cart item count ----------------------------------------------------- */}
+
+
+      
+
             <Link to="/cart">
                 <div className="nav-bag">
                     <svg xmlns="http://www.w3.org/2000/svg" 

@@ -12,6 +12,10 @@ const ProductList = (props) => {
   console.log("a", products);
   const dispatch = useDispatch();
   console.log("a", products);
+
+
+// ------------------------------------------------------------useEffect for api call fetch------------------------------------------------------
+
   useEffect(() => {
     (async () => {
       try {
@@ -28,6 +32,9 @@ const ProductList = (props) => {
   const isLoading = false;
   // const { data, isLoading } = useGetAllProductsQuery();
 
+
+// --------------------------------------------------------------handle Short--------------------------------------------------------------------
+
   const handleSort = () => {
     setShort(!short);
     toast.success(`Applied Low to High`);
@@ -35,12 +42,20 @@ const ProductList = (props) => {
 
   };
 
+
+// --------------------------------------------------------------handle Shortclose--------------------------------------------------------------------
+
+
   const handleClose = () => {
     setShort(!short);
     toast.error(`Sorting Removed`);
     products?.sort((a, b) => a.id - b.id);
 
   };
+
+
+// --------------------------------------------------------------all product list--------------------------------------------------------------------
+
 
   return (
     <div className="home-container">

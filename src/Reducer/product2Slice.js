@@ -12,10 +12,21 @@ const productSlice = createSlice({
   name: "product2",
   initialState,
   reducers: {
+
+
+//-------------------------------------------------------add the product----------------------------------------------------------------------
+
+
+
     addProducts(state,action) {
       state.productList=[action.payload,...state.productList]
       localStorage.setItem("productList",JSON.stringify(state.productList))
     },
+
+//-------------------------------------------------------delete the product----------------------------------------------------------------------
+
+
+
     deleteProduct(state, action) {
       state.productList = state.productList.filter((item) => {
         return item.id !== action.payload.id;
@@ -26,6 +37,11 @@ const productSlice = createSlice({
     });
 
     },
+
+
+//-------------------------------------------------------edit the product----------------------------------------------------------------------
+
+
     editProduct(state, action) {
       state.productList = state.productList.map((item) => {
         if (item.id === action.payload.id) {

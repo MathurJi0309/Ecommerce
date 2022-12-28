@@ -11,8 +11,16 @@ import detailReducer from "./Reducer/detailSlice";
 import filterReducer from "./Reducer/deleteSlice";
 import product2Reducer from "./Reducer/product2Slice";
 
+
+//-------------------------------------------------------create store----------------------------------------------------------------------
+
+
 const store = configureStore({
   reducer: {
+
+//-------------------------------------------------------all reducers----------------------------------------------------------------------
+
+
     products: productsReducer,
     cart: cartReducer,
     detail: detailReducer,
@@ -24,6 +32,11 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(productsApi.middleware),
 });
+
+
+
+//----------------------------------------disptch to fetch all the product in the store the product------------------------------------------------
+
 
 store.dispatch(productsFetch());
 store.dispatch(getTotals());

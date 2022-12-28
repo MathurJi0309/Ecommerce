@@ -9,10 +9,17 @@ const initialState={
     filterpro:[],
 };
 
+
+
+
 const filterSlice =createSlice({
     name:"filter",
     initialState,
     reducers: {
+
+//-------------------------------------------------------add the product----------------------------------------------------------------------
+
+
             addallproduct(state,action){
                 console.log("product",action.payload.products)
                 let p=action.payload
@@ -20,6 +27,10 @@ const filterSlice =createSlice({
                     state.filterpro.push(p[key]);
                   })
             },
+
+//-------------------------------------------------------delete the product----------------------------------------------------------------------
+
+
             deletePro(state,action){
                 const nextCartItems=state.cartItems.filter(
                     (cartItem)=>

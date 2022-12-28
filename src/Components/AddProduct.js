@@ -5,6 +5,13 @@ import { toast } from "react-toastify";
 import { addProducts } from "../Reducer/product2Slice";
 
 const AddProduct = () => {
+
+
+    
+    //---------------------------------------------------- dispatch is used to send the action-----------------------------------------------------
+
+
+
 const dispatch=useDispatch();
 const [title,setTitle]=useState('');
 const [src,setSrc]=useState('');
@@ -12,6 +19,9 @@ const [price,setPrice]=useState('');
 const [discription,setDiscription]=useState('');
 const [add,setAdd] =useState(false);
 const navigate=useNavigate()
+
+
+    //------------------------------------------------------------Handle the add-----------------------------------------------------------------
 
 const handleadd=()=>{
     // e.preventdefault()
